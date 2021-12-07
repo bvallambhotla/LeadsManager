@@ -1,0 +1,125 @@
+body {
+  background-color: #6200ea;
+}
+
+.img-icon {
+  object-fit: cover;
+  object-position: center;
+  height: 85%;
+}
+
+img {
+  vertical-align: text-top;
+}
+
+span {
+  font-size: smaller;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-header,
+.card-body,
+.card-footer {
+  background-color: white !important;
+  border: none !important;
+}
+
+.btn-lg {
+  width: -webkit-fill-available;
+  background-color: #4527a0 !important;
+  border-radius: 0px !important;
+  font-size: smaller !important;
+}
+
+h6 {
+  font-size: 14px !important;
+}
+
+.btn-outline-primary:hover {
+  background-color: #4527a0 !important;
+}
+
+.btn-outline-primary {
+  padding: 0.2rem 0.75rem !important;
+  font-size: x-small !important;
+  border-radius: 25px !important;
+}
+
+.float-label-control input:focus {
+  box-shadow: none;
+  border-bottom-width: 2px;
+  padding-bottom: 0;
+}
+
+.float-label-control input {
+  padding: 0.1em 0em 1px 0em;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid #ccc !important;
+}
+
+#second {
+  display: none;
+}
+
+.btn-info {
+  background-color: white !important;
+}
+
+#my-button {
+  z-index: 1;
+  margin-top: -14px;
+  background-color: rgb(255, 255, 255) !important;
+  width: 60px;
+  height: 25px;
+  font-size: small !important;
+  border: 1px solid grey !important;
+  padding: 0rem 0.75rem;
+}
+
+.cross {
+  opacity: 0.5 !important;
+  cursor: pointer;
+}
+
+#my-button:hover {
+  color: rgb(255, 255, 255);
+  background-color: #4527a0 !important;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.alert {
+  padding: 0.5rem !important;
+  height: 55%;
+  padding-bottom: 1rem !important;
+}
+
+.alert-warning {
+  background-color: rgb(255, 251, 222) !important;
+  border: none !important;
+  margin-bottom: auto !important;
+}
+
+.validation-error {
+  color: rgb(196, 50, 50);
+  font-size: small;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.float-label-control {
+  margin-bottom: 5px;
+}

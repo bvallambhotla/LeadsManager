@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="card card-container">
+    <img
+      class="profile-img-card"
+      src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+    />
+    <p id="profile-name" class="profile-name-card"></p>
+    <form class="form-signin" [formGroup]="signinForm">
+      <span class="reauth-email"></span>
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Email address"
+        formControlName="email"
+        required
+        autofocus
+      />
+      <div
+        *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+        class="validation-error"
+      >
+        <div *ngIf="email?.errors?.['required']">*Email is required.</div>
+        <div *ngIf="email?.errors?.['email']">*Email is invalid.</div>
+      </div>
+      <br />
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Password"
+        formControlName="password"
+        required
+      />
+      <div
+        *ngIf="password?.invalid && (password?.dirty || password?.touched)"
+        class="validation-error"
+      >
+        <div *ngIf="password?.errors?.['required']">Password is required.</div>
+        <div *ngIf="password?.errors?.['minlength']">
+          *Password must be atleast 8 chars.
+        </div>
+        <div *ngIf="password?.errors?.['maxlength']">
+          *Password should not be more than 16 chars.
+        </div>
+        <div *ngIf="password?.errors?.['pattern']">
+          *Password must contain atleast one Uppercase character and a special
+          character.
+        </div>
+      </div>
+
+      <button
+        class="btn btn-lg btn-primary btn-block btn-signin"
+        type="button"
+        (click)="signin()"
+        [disabled]="signinForm?.invalid"
+      >
+        Let me in
+      </button>
+    </form>
+  </div>
+</div>

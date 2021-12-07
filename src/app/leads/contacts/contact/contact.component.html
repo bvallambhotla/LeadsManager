@@ -1,0 +1,105 @@
+<div class="contact">
+  <div class="modal-header">
+    <h5 class="modal-title">Contact Form</h5>
+    <button
+      type="button"
+      class="close"
+      aria-label="Close"
+      (click)="activeModal.dismiss('Cross click')"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="container">
+      <div class="row">
+        <div class="card mx-auto border-0 shadow-lg pt-20 mb-5">
+          <section id="first">
+            <div class="card-body mt-0 py-0">
+              <div class="row">
+                <div class="col">
+                  <form class="form-signin" [formGroup]="contactForm">
+                    <div class="form-group float-label-control">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Name*"
+                        formControlName="name"
+                      />
+                      <div
+                        *ngIf="name?.invalid && (name?.dirty || name?.touched)"
+                        class="validation-error"
+                      >
+                        <div *ngIf="name?.errors?.['required']">
+                          *Name is required.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group float-label-control">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Country*"
+                        formControlName="country"
+                      />
+                      <div
+                        *ngIf="contactForm?.invalid && contactForm?.dirty"
+                        class="validation-error"
+                      >
+                        <div *ngIf="country?.errors?.['required']">
+                          *Country is required.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group float-label-control">
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="Phone"
+                        formControlName="phone"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <button
+                type="button"
+                class="btn btn-primary btn-lg mb-2"
+                id="next"
+              >
+                Fill in all the required fields
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      (click)="editMode ? save() : add()"
+      [disabled]="contactForm.invalid"
+    >
+      {{ editMode ? 'Save' : 'Add' }}
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      *ngIf="editMode"
+      (click)="delete()"
+    >
+      Delete
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      (click)="activeModal.close()"
+    >
+      Close
+    </button>
+  </div>
+</div>

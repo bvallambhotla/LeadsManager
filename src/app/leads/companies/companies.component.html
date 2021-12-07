@@ -1,0 +1,27 @@
+<div class="col-md-10 text-center">
+  <h4 class="text-center">Companies</h4>
+  <table class="table table-striped mx-auto">
+    <thead>
+      <tr>
+        <th scope="col" sortable="id">Id</th>
+        <th scope="col" sortable="name" (sort)="onSort($event)">Name</th>
+        <th scope="col" sortable="area" (sort)="onSort($event)">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let company of companies" (dblclick)="rowClick(company)">
+        <th scope="row">{{ company.id }}</th>
+        <td>
+          <img
+            [src]="company.logo"
+            class="mr-2"
+            style="width: 20px"
+            alt="{{ company.name }} - logo"
+          />
+          {{ company.name }}
+        </td>
+        <td>{{ company.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
