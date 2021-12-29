@@ -6,22 +6,23 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Leads Manager
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ivy-anpdz1)
 
-## Build
+Instructions on how to navigate
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. The landing page of the application is the login form
+   1.1 credentials are prefilled in the login form
+   1.2 the email is validated against the database (api call)
+   1.3 sign-in button is only enabled when form is validated
+   1.4 password validation errors are shown whne it doesn't meet the criteria
 
-## Running unit tests
+2. After signin, we navigate to company listing page
+   2.1 doubled click on any row to show the contacts listing for the specific company (filtered by the companyId)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Contacts listing
+   3.1 double click on any contact to open the contact form
+   3.2 use add button to add a new contact
+   3.3 use the delete/save/add buttons inside the form for respective operations
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
